@@ -1,0 +1,29 @@
+{
+  "name": "TogglRebble",
+  "author": "Clayton Does things",
+  "version": "1.0.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {},
+  "pebble": {
+    "displayName": "TogglRebble",
+    "uuid": "1b86cec8-f708-40d5-93b4-29275ca99509",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite"
+    ],
+    "watchapp": {
+      "watchface": false
+    },
+    "messageKeys": [
+      "AccountToken"
+    ],
+    "resources": {
+      "media": []
+    }
+  }
+}
