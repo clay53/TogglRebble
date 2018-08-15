@@ -9,22 +9,22 @@ const uint32_t outbox_size = 256;
 static void inbox_received_callback(DictionaryIterator *iter, void *context) {
   APP_LOG(APP_LOG_LEVEL_DEBUG, "Message Recieved");
 
-  // printf("%s", dict_read_first(iter)->value->cstring);
+  printf("%s", dict_read_first(iter)->value->cstring);
 
-  // // Is the location name inside this message?
-  // Tuple *location_tuple = dict_find(iter, MESSAGE_KEY_AccountToken);
-  // printf("%s", location_tuple ? "true" : "false");
-  // if(location_tuple) {
-  //   // This value was stored as JS String, which is stored here as a char string
-  //   char *location_name = location_tuple->value->cstring;
+  // Is the location name inside this message?
+  Tuple *location_tuple = dict_find(iter, MESSAGE_KEY_AccountToken);
+  printf("%s", location_tuple ? "true" : "false");
+  if(location_tuple) {
+    // This value was stored as JS String, which is stored here as a char string
+    char *location_name = location_tuple->value->cstring;
 
-  //   // Use a static buffer to store the string for display
-  //   static char s_buffer[64];
-  //   snprintf(s_buffer, sizeof(s_buffer), "Location: %s", location_name);
+    // Use a static buffer to store the string for display
+    static char s_buffer[64];
+    snprintf(s_buffer, sizeof(s_buffer), "Location: %s", location_name);
 
-  //   // Display in the TextLayer
-  //   text_layer_set_text(s_text_layer, s_buffer);
-  // }
+    // Display in the TextLayer
+    text_layer_set_text(s_text_layer, s_buffer);
+  }
 }
 
 static void inbox_dropped_callback(AppMessageResult reason, void *context) {
