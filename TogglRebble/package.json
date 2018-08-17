@@ -20,7 +20,10 @@
       "watchface": false
     },
     "messageKeys": [
-      "AccountToken"
+      "JSReady",
+      "RequestData",
+      "ApiToken",
+      "GetRunningTimeEntry"
     ],
     "resources": {
       "media": []
