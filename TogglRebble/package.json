@@ -23,7 +23,18 @@
       "JSReady",
       "RequestData",
       "ApiToken",
-      "GetRunningTimeEntry"
+      "RunningTimeEntry",
+      "RunningTimeEntry_id",
+      "RunningTimeEntry_guid",
+      "RunningTimeEntry_wid",
+      "RunningTimeEntry_pid",
+      "RunningTimeEntry_billable",
+      "RunningTimeEntry_start",
+      "RunningTimeEntry_duration",
+      "RunningTimeEntry_description",
+      "RunningTimeEntry_duronly",
+      "RunningTimeEntry_at",
+      "RunningTimeEntry_uid"
     ],
     "resources": {
       "media": []

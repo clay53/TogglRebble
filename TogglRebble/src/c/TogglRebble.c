@@ -3,8 +3,8 @@
 static Window *s_window;
 static TextLayer *s_text_layer;
 
-const uint32_t inbox_size = 64;
-const uint32_t outbox_size = 256;
+const uint32_t inbox_size = 256;
+const uint32_t outbox_size = 64;
 
 static void request_data(int key) {
   // Declare the dictionary's iterator
@@ -52,7 +52,7 @@ static void inbox_received_callback(DictionaryIterator *iter, void *context) {
     // Display in the TextLayer
     text_layer_set_text(s_text_layer, s_buffer);
 
-    request_data(MESSAGE_KEY_GetRunningTimeEntry);
+    request_data(MESSAGE_KEY_RunningTimeEntry);
   }
 }
 
