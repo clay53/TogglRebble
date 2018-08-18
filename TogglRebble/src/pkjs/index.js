@@ -41,7 +41,7 @@ Pebble.addEventListener('appmessage', function(e) {
       if (keyName === "ApiToken") {
         getTokenFromUsernameAndPassword("diamondminer81@gmail.com", "testing");
       } else if (keyName === "RunningTimeEntry") {
-          getRunningTimeEntry();
+        getRunningTimeEntry();
       }
   }
 });
