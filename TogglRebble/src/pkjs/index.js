@@ -61,14 +61,13 @@ xhr.onreadystatechange = function() {
                 console.log(JSON.stringify(dict));
 
                 // Send the object
-                Pebble.sendAppMessage(dict, function() {
-                    console.log('Message sent successfully: ' + JSON.stringify(dict));
-                }, function(e) {
-                    console.log('Message failed: ' + JSON.stringify(e));
-                });
-            } else if (token === "") {
+                sendAppMessage(dict);
+            } else if (token === "" || token === "None") {
                 token = _token;
                 console.log("User crendtials are incorrect or internet may be down");
+                sendAppMessage({
+                    "ApiToken": "Failed"
+                });
             } else {
                 console.log("This should be impossible.");
             }

@@ -3,8 +3,8 @@
 static Window *s_window;
 static TextLayer *s_text_layer;
 
-const uint32_t inbox_size = 256;
-const uint32_t outbox_size = 64;
+const uint32_t inbox_size = 64;
+const uint32_t outbox_size = 256;
 
 static void request_data(int key) {
   // Declare the dictionary's iterator
